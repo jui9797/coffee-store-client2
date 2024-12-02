@@ -8,12 +8,29 @@ import {
 } from "react-router-dom";
 import AddCoffee from './components/AddCoffee.jsx';
 import UpdateCoffee from './components/UpdateCoffee.jsx';
+import SignUp from './components/SignUp.jsx';
+import { AuthProvider } from './components/AuthProvider.jsx';
+import Users from './components/Users.jsx';
+import Login from './components/Login.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
     loader: ()=> fetch('http://localhost:5000/coffee')
+  },
+  {
+    path:'/signUp',
+    element:<SignUp></SignUp>
+  },
+  {
+    path:'/login',
+    element:<Login></Login>
+  },
+  {
+    path:'/users',
+    element:<Users></Users>,
+    loader: ()=> fetch('http://localhost:5000/users')
   },
   {
     path:'addCoffee',
@@ -28,6 +45,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+   <AuthProvider>
+   <RouterProvider router={router} />
+   </AuthProvider>
   </StrictMode>,
 )
