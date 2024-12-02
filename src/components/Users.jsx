@@ -27,7 +27,7 @@ const Users = () => {
                     )
                     .then(data => {
 
-                        console.log('delete is done', data)
+                        // console.log('delete is done', data)
                         if (data.deletedCount> 0) {
                               Swal.fire({
                                 title: "Deleted!",

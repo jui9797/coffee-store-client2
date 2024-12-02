@@ -13,7 +13,7 @@ const handleLogin=e=>{
 
     signInUser(email, password)
     .then(result =>{
-        console.log(result.user)
+        // console.log(result.user)
         // update last login time
         const lastSigninTime =result?.user?.metadata?.lastSignInTime
 
@@ -27,7 +27,7 @@ const handleLogin=e=>{
         })
         .then(res =>res.json())
         .then(data=>{
-            console.log('sign in info updated db', data)
+            // console.log('sign in info updated db', data)
         })
     })
 }
