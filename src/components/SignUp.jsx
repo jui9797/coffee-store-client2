@@ -24,7 +24,7 @@ createUser(email, password)
     const newUser = { name, email, createdAt }
     console.log(result.user)
     // save users info to database
-    fetch('http://localhost:5000/users',{
+    fetch('https://coffee-store-server2-tan.vercel.app/users',{
         method:'POST',
         headers:{
             'content-type' :'application/json'

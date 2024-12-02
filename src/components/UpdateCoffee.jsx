@@ -20,7 +20,7 @@ const details =form.details.value
 const photo =form.photo.value
 const updatedCoffee ={name, quantity, supplier, taste, category, details, photo}
 console.log(updatedCoffee)
-fetch(`http://localhost:5000/coffee/${_id}`, {
+fetch(`https://coffee-store-server2-tan.vercel.app/coffee/${_id}`, {
     method:'PUT',
     headers:{
         'content-type': 'application/json'

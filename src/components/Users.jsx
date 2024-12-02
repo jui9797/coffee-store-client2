@@ -20,7 +20,7 @@ const Users = () => {
         }).then((result) => {
             
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/users/${id}`, {
+                fetch(`https://coffee-store-server2-tan.vercel.app/users/${id}`, {
                     method: 'DELETE'
                 })
                     .then(result =>result.json()

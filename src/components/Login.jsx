@@ -18,7 +18,7 @@ const handleLogin=e=>{
         const lastSigninTime =result?.user?.metadata?.lastSignInTime
 
         const loginInfo ={email, lastSigninTime}
-        fetch(`http://localhost:5000/users`,{
+        fetch(`https://coffee-store-server2-tan.vercel.app/users`,{
             method: 'PATCH',
             headers:{
                 'content-type' : 'application/json'

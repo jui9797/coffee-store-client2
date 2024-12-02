@@ -16,7 +16,7 @@ const photo =form.photo.value
 const newCoffee ={name, quantity, supplier, taste, category, details, photo}
 console.log(newCoffee)
 
-fetch(`http://localhost:5000/coffee`, {
+fetch(`https://coffee-store-server2-tan.vercel.app/coffee`, {
     method:'POST',
     headers:{
         'content-type': 'application/json'
